@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <div class="loading">Loading...</div>
+  <body id = "snow">
+      <button class = "unit" id = "fahrenheit">
+        <div class = "f">F</div>
+        <div>|</div>
+        <div class = "c">C</div>
+      </button>
+      <div class="body">
+        <div class = "form">
+          <label for="location"></label>
+          <input type="text" name="location" id="location" placeholder = "City Name">
+          <button class = "submit">Submit</button>
+        </div>
+        <div class="header">
+          <div class="city">Orlando</div>
+          <div class="deg">80°</div>
+          <div class="desc">Cloudy</div>
+          <div class="lohi">H: 91°  L: 74°</div>
+        </div>
+        <div class="listDescription">Similar temperatures continuing with no rain expected.</div>
+        <div class="hourList">
+          
+          <!-- <div class="hourContainer">
+            <div class="hour">3PM</div>
+            <img src="" alt="" class="icon">
+            <div class="temp">78</div>
+          </div> -->
+          
+        </div>
+        <div class="bottom">
+          <div>
+            <div class="bottomHeader">Precipitation</div>
+            <div class="num precip">50%</div>
+          </div>
+          <div >
+            <div class="bottomHeader">Wind</div>
+            <div class="num wind">50%</div>
+          </div>
+          <div >
+            <div class="bottomHeader">UV Index</div>
+            <div class="num uv">50%</div>
+          </div>
+          <div>
+            <div class="bottomHeader">Humidity</div>
+            <div class="num humid">50%</div>
+          </div>
+        </div>
+    </div>
+  </body>
+  <script src = "index.js"></script>
+</html>

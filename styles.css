@@ -1,0 +1,141 @@
+.loading{
+    position: fixed;
+    text-align: center; 
+    width: 100vw; height: 100vh; color: white; 
+    padding-top: 45vh; font-size: 5vh;
+    background-color: gray;  
+    z-index: 99; opacity: .9;
+    display: none;
+}
+body{
+    margin:0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, 'Trebuchet MS', sans-serif;
+    display: flex; justify-content: center;
+    color: white;
+    
+}
+#clear-day{
+    background-image: radial-gradient( rgb(206, 233, 242), skyblue)
+}
+#clear-night, #partly-cloudy-night{
+    background-color: black;
+}
+#cloudy{
+    background-image: linear-gradient(darkgray, rgb(240, 240, 240))
+}
+#partly-cloudy-day, #wind{
+    background-image: linear-gradient(gray, lightgray, skyblue);
+}
+#rain, #showers-day, #showers-night{
+    background-image: radial-gradient(lightgray, gray)
+}
+#snow{
+    background-image: white; color: black;
+}
+#thunder-rain{
+    background-image: radial-gradient(darkgray, black);
+}
+.body{
+    opacity: .95;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr 2.5fr 3fr;
+    grid-template-columns: 75vw;
+    margin: 3vh 5vw 8vh 5vw;
+    height: 90vh; width: 80vw;
+    padding-top: 2vh;
+    justify-content: center; align-items: center;
+    /* background-color: lightgray; */
+    border-radius: 2vh;
+}
+.form{
+    display: flex;  flex-grow: 0; flex-shrink: 0;
+    justify-content: center; padding-top: 2vh; padding-bottom: 2vh; gap: .5vw;
+}
+.header{
+    display: grid;
+    grid-template-rows: 2fr 3fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+}
+.header>.city{
+    font-size: 5vh;
+}
+.header>.deg{
+    font-size: 7vh;
+}
+.header>.desc, .header>.lohi{
+    font-size: 3vh;
+}
+.bottom{
+    grid-auto-columns: 1fr;
+}
+.hourList{
+
+    display: grid; 
+    grid-template-columns: repeat(24, 1fr); gap: 1vw;
+    overflow: scroll;
+}
+.hourContainer{
+    display: grid; grid-template-rows: 1fr 3fr 1fr;  text-align: center;
+}
+.hour{
+    font-size: 2vh;
+}
+
+.temp{
+    font-size: 3vh;
+}
+.bottom{
+    display: flex; justify-content: space-around; text-align: center;
+    padding-left:6vw;  padding-right: 6vw;
+}
+.bottom>div{
+    border-radius: 2vh; border: 2px solid white; height: 20vh; width: 20vh;
+    padding: 1vh 1vw 1vh 1vw;
+    display: grid; grid-template-rows: 1fr 3fr;
+    align-items: center; justify-content: center;
+}
+.bottom>div>.num{
+    font-size: 5vh;
+}
+input{
+    border-radius: 7px;
+    border: black solid 1px;
+    width: 7vw; transition: all .5s ease-in-out;
+}
+input:focus{
+    outline: none;
+    border: lightblue solid 3px;
+    width: 10vw; transition: all .5s ease-in-out;
+}
+.submit{
+    position: relative;
+    border-radius: 5px; border: solid black 1px; 
+}
+.icon{
+    height: 7vh;
+    transition: all .5s ease-in-out;
+}
+.icon:hover{
+    transition: all .3s ease-in-out;
+    scale: 1.3;
+}
+.listDescription{
+    border-bottom: solid white 2px;
+    padding-bottom: 1vh;
+}
+.unit{
+    border: none; position: absolute;
+    height: 3vh; padding: 0vh 1vw 0vh 1vw;
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    align-items: center; top: 7vh; right: 30vw; border-radius: 5px;
+    z-index: 98;
+}
+.unit>div{
+    transition: all 1s ease-in-out; opacity: .1;
+}
+#fahrenheit>.f, #celsius>.c{
+    opacity: 1;
+    scale: 1.3; 
+    transition: all 1s ease-in-out;
+}
